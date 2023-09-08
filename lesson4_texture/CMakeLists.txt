@@ -1,0 +1,7 @@
+project(04texure)
+add_executable(04texure main.cpp)
+
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/shader/obj.frag DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/shader)
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/shader/obj.vert DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/shader)
+file(COPY ${CMAKE_SOURCE_DIR}/image/box.jpg DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/image)
+file(COPY ${CMAKE_SOURCE_DIR}/image/laugh.png DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/image)
