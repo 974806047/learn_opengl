@@ -1,0 +1,7 @@
+project(19pbr)
+add_executable(19pbr main.cpp)
+file(REMOVE_RECURSE ${CMAKE_CURRENT_BINARY_DIR}/shader)
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/shader/obj.frag DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/shader )
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/shader/obj.vert DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/shader )
+file(COPY ${CMAKE_SOURCE_DIR}/image/brickwall.jpg DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/image )
+file(COPY ${CMAKE_SOURCE_DIR}/image/brickwall_normal.jpg DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/image )

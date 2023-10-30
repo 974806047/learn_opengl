@@ -171,12 +171,12 @@ void testCase1() {
         glBindVertexArray(initData.VAO);
         
         m4 = glm::translate(m4, glm::vec3(0.5, 0, 0));
-        shader.setMatrix4("transform", glm::value_ptr(m4));
+        shader.setMat4("transform", m4);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
         m4 = glm::translate(m4, glm::vec3(-1, 0, 0));
         m4 = glm::scale(m4, glm::vec3(sin(glfwGetTime())));
         // m4 = glm::rotate(m4, (float)glfwGetTime(), glm::vec3(0.0, 0.0, 1.0));
-        shader.setMatrix4("transform", glm::value_ptr(m4));
+        shader.setMat4("transform", m4);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
         
         // ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
@@ -315,7 +315,7 @@ void testCase2() {
             projection = glm::perspective(glm::radians(fov), aspect, 0.1f, 100.0f);
             transform = projection * view * model;
             // m4 = glm::rotate(m4, (float)glfwGetTime(), glm::vec3(0.0, 0.0, 1.0));
-            shader.setMatrix4("transform", glm::value_ptr(transform));
+            shader.setMat4("transform", transform);
             glDrawArrays(GL_TRIANGLES, 0, 36);
         }
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);

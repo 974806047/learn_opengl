@@ -1,0 +1,5 @@
+project(16instance)
+add_executable(16instance main.cpp)
+file(REMOVE_RECURSE ${CMAKE_CURRENT_BINARY_DIR}/shader)
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/shader/array.frag DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/shader )
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/shader/array.vert DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/shader )

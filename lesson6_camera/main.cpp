@@ -249,7 +249,7 @@ void testCase1() {
             model = glm::rotate(model, (float)glfwGetTime() * glm::radians(50.0f), glm::vec3(0.5f, 1.0f, 0.0f));
             projection = glm::perspective(glm::radians(fov), aspect, 0.1f, 100.0f);
             transform = projection * view * model;
-            shader.setMatrix4("transform", glm::value_ptr(transform));
+            shader.setMat4("transform", transform);
             glDrawArrays(GL_TRIANGLES, 0, 36);
         }
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);

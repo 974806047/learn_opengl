@@ -8,6 +8,8 @@
 * [glfw](https://www.glfw.org/download.html)
 * [glew 2.1.0](https://glew.sourceforge.net/index.html)
 * [stb_image 2.28](https://github.com/nothings/stb/blob/master/stb_image.h)
+* [assimp](https://www.microsoft.com/en-us/download/details.aspx?id=6812)
+  * [assimp编译出现问题，可以参照这个](https://blog.csdn.net/zionFisher/article/details/120337198)
 
 ### 开始
 * 安装cmake和mingw
@@ -19,3 +21,4 @@
 
 
 ### 效果
+[第一章](doc/1.md)
